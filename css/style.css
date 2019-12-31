@@ -1,0 +1,33 @@
+.category:hover{
+	text-decoration: underline;
+}
+
+.item{
+	height: 400px;
+	float: left;
+}
+
+.item li{
+	list-style-type: none;
+}
+
+.item p{
+	text-align: center;
+}
+
+.item img{
+	height: 150px;
+
+}
+
+.buy{
+	width: 200px;
+	background: #ffb300;
+}
+
+.delete{
+	color:red;
+	font-weight: 700;
+	font-size: 20px;
+	padding-left: 20px;
+}
