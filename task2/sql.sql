@@ -1,0 +1,1 @@
+INSERT INTO b.s(date, image, name) SELECT date, replace(longimage,'content/images/',''), concat(firstname, lastname) FROM a.`k` WHERE 1
