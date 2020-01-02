@@ -12,7 +12,7 @@ $sth->execute();
 
 //add database rows  in array  with sort by parent
 while($cat =  $sth->fetch(PDO::FETCH_ASSOC)){
-     $categories[$cat['parent_id']][$cat['id']] =  $cat;
+     $categories[$cat['parents_id']][$cat['categories_id']] =  $cat;
 }
 
 
@@ -21,8 +21,8 @@ function build_tree($categories,$parent_id){
     if(is_array($categories) && isset($categories[$parent_id])){
         $tree = '<ul>';
             foreach($categories[$parent_id] as $category){
-                $tree .= '<li>'.$category['name'];
-                $tree .=  build_tree($categories,$category['id']);
+                $tree .= '<li>categories_id:'.$category['categories_id'];
+                $tree .=  build_tree($categories,$category['categories_id']);
                 $tree .= '</li>';
             }
         $tree .= '</ul>';
